@@ -1,5 +1,8 @@
 # Experiment ledger
 
+<!-- markdownlint-disable MD013 MD060 -->
+<!-- Compact ledger entries intentionally remain one row per problem. -->
+
 This file is the autonomous processed-problem state. A problem listed here is not selected again by routine solver runs unless deliberately reopened for verification. Individual `problems/<n>.md` files are the authoritative mathematical records; this index is intentionally compact.
 
 Fresh same-model reproduction audit: [`REPRODUCTION_AUDIT_2026-08-30.md`](REPRODUCTION_AUDIT_2026-08-30.md).
@@ -84,5 +87,6 @@ Fresh same-model reproduction audit: [`REPRODUCTION_AUDIT_2026-08-30.md`](REPROD
 | [#17](problems/17.md) | OPEN | known reduction independently rediscovered |
 | [#18](problems/18.md) | OPEN | no progress / computation reproduced |
 | [#30](problems/30.md) | OPEN | no progress |
+| [#261](problems/261.md) | OPEN | useful exact reformulation / candidate prefix-closure lemma - novelty unresolved / extended finite verification |
 
 No entry in this ledger is represented as a new solution unless separately labeled `verified-complete-proof` after completeness, correctness, reproduction, and prior-art auditing.
