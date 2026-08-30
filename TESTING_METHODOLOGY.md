@@ -1,6 +1,6 @@
 # Testing methodology
 
-This repository is both a mathematical work log and an experimental record. This file documents the **testing and verification protocol** used to evaluate solver outputs. It intentionally does **not** disclose the separate unpublished research methodology concerning language-dominant LLM reasoning; it records how claims are selected, controlled, reproduced, attacked, classified, and preserved.
+This repository is both a mathematical work log and an experimental record. This file documents the **testing and verification protocol** used to evaluate solver outputs. The operational reasoning instructions supplied to repository agents are versioned separately in [`AGENTS.md`](AGENTS.md). Private biographical context and the larger unpublished language/philosophy project are not part of this public testing record.
 
 ## Experimental object
 
@@ -16,6 +16,33 @@ The experiment is interested in several increasingly strong outcomes:
 6. a complete result whose novelty also survives prior-art review.
 
 These are different claims and must not be collapsed into one another.
+
+## Model context is an experimental variable
+
+The solver does not operate independently of its instructions or available context. Context therefore has to be treated as part of the experimental condition rather than as invisible background.
+
+The repository-root [`AGENTS.md`](AGENTS.md) is the canonical shared instruction layer for repository-aware models. It gives the grammar-first discovery/control rules in explicit conditional form and tells agents how to interact with the mathematical ledger and verification protocol.
+
+Before a repository-aware attempt, the model should read, in this order:
+
+1. `AGENTS.md`;
+2. `TESTING_METHODOLOGY.md`;
+3. `index.md`;
+4. `RUN_LOG.md` when the attempt is autonomous or scheduled;
+5. the relevant `problems/<n>.md` when a processed problem is deliberately reopened.
+
+The commit state of `AGENTS.md` should be regarded as part of run provenance. If its instructions materially change, later runs are not strictly the same experimental condition as earlier runs.
+
+This matters especially when comparing:
+
+- a high-context interactive ChatGPT run;
+- an autonomous scheduled run;
+- a locally cloned Codex run;
+- a fresh verification model that is intentionally given less discovery context.
+
+Those conditions may all be scientifically useful, but they should not be described as identical controls.
+
+For final verification, less discovery context can be desirable. A verifier should ideally receive the problem statement, frozen mathematical proof, and verification target without being coached through the original discovery path. That makes agreement less correlated.
 
 ## Target selection
 
@@ -134,7 +161,8 @@ Scheduled execution is an operational mechanism, not mathematical evidence. Each
 - output classifications;
 - whether a candidate complete solution triggered reproduction;
 - relevant commit(s);
-- scheduler or tool anomalies.
+- scheduler or tool anomalies;
+- the relevant agent-instruction commit when the instruction layer changed materially.
 
 A missed, late, duplicated, or silent run should be recorded rather than reconstructed as though it occurred normally.
 
@@ -150,7 +178,7 @@ Confidence, elegance, repeated wording, and finite computation are not substitut
 
 The intended hierarchy is:
 
-1. discovery model;
+1. discovery model under a recorded instruction/context condition;
 2. same-model fresh reproduction;
 3. representation-diverse verification and exact computation;
 4. different model/system (for example Codex) or formal proof environment;
