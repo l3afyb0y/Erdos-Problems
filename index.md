@@ -6,6 +6,11 @@ Fresh same-model reproduction audit: [`REPRODUCTION_AUDIT_2026-08-30.md`](REPROD
 
 | Erdős problem | Database status at attempt | Experiment result | Public note |
 |---|---|---|---|
+| [#68](problems/68.md) | OPEN | candidate/new partial lemma | Rationality of `sum_{n>=2}1/(n!-1)` forces an exact maximal-depth `p`-adic cancellation congruence for every sufficiently large prime. Exact scan of all 2260 primes `5<=p<20000` finds cancellation only for `p=139,2593`; infinitude of failures remains unproved. |
+| [#66](problems/66.md) | OPEN | useful reformulation / necessary asymptotic | If `r_A(n)~c log n`, then Tauberian inversion forces `A(N)~2 sqrt(c/pi) sqrt(N log N)`; parity of `r_A(2m)` exactly recovers membership of `m`. No contradiction or construction obtained. |
+| [#60](problems/60.md) | OPEN | known reduction independently rediscovered / useful near-extremal reduction | Exact codegree identity gives the standard `C4` supersaturation inequality; a counterexample with `o(sqrt n)` cycles would be an `o(sqrt n)`-edge perturbation of a near-extremal `C4`-free graph. |
+| [#52](problems/52.md) | OPEN | no-progress | Injectivity of unordered pairs under `(a+b,ab)` gives only a linear lower bound; no new invariant coupled additive and multiplicative collision structure beyond current sum-product methods. |
+| [#51](problems/51.md) | OPEN | known/basic reduction / no new progress | Exact inverse-totient factorization and a local replacement obstruction were obtained, but a very recent 2026 partial-results package is substantially stronger. |
 | [#36](problems/36.md) | OPEN | useful reformulation / elementary identity | Exact decomposition `max(C_x,C_-x)=(T_x+|E_x|)/2`: unoriented cross-colour mass plus a boundary-window orientation imbalance. No improvement to current numerical bounds. |
 | [#39](problems/39.md) | OPEN | no-progress / greedy obstruction anatomy | New-point exclusions are governed by `S+S-S` plus half-sums; Sidonicity alone does not control collisions among these three-term forbidden values. |
 | [#40](problems/40.md) | OPEN | no-progress / scale obstruction clarified | Single-scale and dyadic pair-budget arguments remain compatible with bounded representation below `sqrt(N)` by any diverging factor; genuinely multiscale input is required. |
