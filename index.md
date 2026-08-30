@@ -6,6 +6,11 @@ Fresh same-model reproduction audit: [`REPRODUCTION_AUDIT_2026-08-30.md`](REPROD
 
 | Erdős problem | Database status at attempt | Experiment result |
 |---|---|---|
+| [#200](problems/200.md) | OPEN | known reduction independently rediscovered / primorial divisibility barrier |
+| [#187](problems/187.md) | OPEN | known reduction independently rediscovered / scale-local van der Waerden recursion |
+| [#181](problems/181.md) | OPEN | known reduction independently rediscovered / standard bipartite Ramsey lower bound |
+| [#177](problems/177.md) | OPEN | no progress / simultaneous residue-subsequence balancing barrier |
+| [#174](problems/174.md) | OPEN | no progress / affine-dependence frontier after recent pyramid closure |
 | [#173](problems/173.md) | OPEN | useful reformulation / forced-colour geometric propagation |
 | [#172](problems/172.md) | OPEN | useful reformulation / diagonal-vs-off-diagonal Ramsey obstruction |
 | [#170](problems/170.md) | OPEN | no progress / duplicate-difference excess barrier |
