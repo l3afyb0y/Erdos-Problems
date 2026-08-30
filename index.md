@@ -6,6 +6,7 @@ Fresh same-model reproduction audit: [`REPRODUCTION_AUDIT_2026-08-30.md`](REPROD
 
 | Erdős problem | Database status at attempt | Experiment result |
 |---|---|---|
+| [#112](problems/112.md) | OPEN | known reduction independently rediscovered / known polynomial-recursion barrier |
 | [#108](problems/108.md) | OPEN | no progress / short-cycle-transversal barrier |
 | [#104](problems/104.md) | OPEN | useful reformulation / known pair-incidence barrier |
 | [#101](problems/101.md) | OPEN | candidate/new partial lemma — novelty unresolved |
