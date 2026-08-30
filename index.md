@@ -6,6 +6,7 @@ Fresh same-model reproduction audit: [`REPRODUCTION_AUDIT_2026-08-30.md`](REPROD
 
 | Erdős problem | Database status at attempt | Experiment result |
 |---|---|---|
+| [#101](problems/101.md) | OPEN | candidate/new partial lemma — novelty unresolved |
 | [#100](problems/100.md) | OPEN | no progress / known distinct-distance barrier |
 | [#244](problems/244.md) | OPEN | useful reformulation / known Romanoff-type second-moment route |
 | [#341](problems/341.md) | OPEN | known/basic structural reduction / no new global progress |
