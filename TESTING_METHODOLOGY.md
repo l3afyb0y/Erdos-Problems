@@ -27,8 +27,8 @@ Before a repository-aware attempt, the model should read, in this order:
 
 1. `AGENTS.md`;
 2. `TESTING_METHODOLOGY.md`;
-3. `index.md`;
-4. `RUN_LOG.md` when the attempt is autonomous or scheduled;
+3. `index.md` when processed-problem state is relevant;
+4. the executor-specific run log when provenance is relevant: `RUN_LOG.md` for the scheduled ChatGPT/autonomous remote solver, `CODEX_RUN_LOG.md` for local or interactive Codex;
 5. the relevant `problems/<n>.md` when a processed problem is deliberately reopened.
 
 The commit state of `AGENTS.md` should be regarded as part of run provenance. If its instructions materially change, later runs are not strictly the same experimental condition as earlier runs.
@@ -153,18 +153,26 @@ The 2026-08-30 reproduction audit is an example: it detected a false equivalence
 
 ## Automation and run provenance
 
-Scheduled execution is an operational mechanism, not mathematical evidence. Each autonomous batch should append a compact entry to `RUN_LOG.md` recording:
+Execution provenance is separated by agent/environment so one agent cannot overwrite another agent's operational history.
+
+- `RUN_LOG.md` is reserved for the scheduled ChatGPT/autonomous remote solver.
+- `CODEX_RUN_LOG.md` is reserved for local or interactive Codex sessions.
+
+Each logged run should record, when relevant:
 
 - scheduled time when known;
 - observed execution/commit time;
-- problem IDs selected;
+- problem IDs or task selected;
 - output classifications;
 - whether a candidate complete solution triggered reproduction;
+- tools materially used during discovery versus verification;
 - relevant commit(s);
-- scheduler or tool anomalies;
+- scheduler, permission, context, or tool anomalies;
 - the relevant agent-instruction commit when the instruction layer changed materially.
 
-A missed, late, duplicated, or silent run should be recorded rather than reconstructed as though it occurred normally.
+A missed, late, duplicated, interrupted, or silent run should be recorded rather than reconstructed as though it occurred normally.
+
+Run logs are append-only provenance records in normal operation. Agents should read the existing log before appending and should not replace another executor's history to add their own run.
 
 ## Promotion rule
 

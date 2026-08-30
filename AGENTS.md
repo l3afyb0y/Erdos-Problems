@@ -4,7 +4,7 @@ This file is the repository-level instruction layer for Codex and other agents w
 
 Its primary practical purpose is to let an agent enter a local clone and immediately understand **how to work here** without requiring the user to reconstruct the experiment from chat history. The same file may also be read by scheduled or remote agents so that multiple systems share one normalized operating method.
 
-The method is shared. The task is not.
+The method is shared. The task is not. The run log is not shared either.
 
 **If the user gives a specific task, then that task is the target.**
 
@@ -57,7 +57,7 @@ Read:
 1. `AGENTS.md`;
 2. `TESTING_METHODOLOGY.md`;
 3. `index.md`;
-4. `RUN_LOG.md` when run provenance matters.
+4. the run log appropriate to the agent that is actually executing the work.
 
 Then select a currently open, unprocessed problem and follow the autonomous loop in Section 15.
 
@@ -78,13 +78,20 @@ Treat the repository as persistent experimental state.
 - `index.md` = compact processed-problem ledger.
 - `problems/<n>.md` = authoritative mathematical record for problem `n`.
 - `verification/` = exact checkers and computational support.
-- `RUN_LOG.md` = autonomous execution provenance and scheduler/tool anomalies.
+- `RUN_LOG.md` = **scheduled ChatGPT/autonomous remote solver execution provenance only**.
+- `CODEX_RUN_LOG.md` = **local or interactive Codex execution provenance only**.
+
+Keep the two run logs separate. They exist precisely so two agents cannot overwrite, merge, or silently normalize each other's operational history.
 
 **If a mathematical claim changes, then update the relevant problem record.**
 
 **If its classification changes, then update `index.md`.**
 
-**If an autonomous run occurs, then update `RUN_LOG.md` truthfully.**
+**If a scheduled ChatGPT/autonomous remote run occurs, then append only to `RUN_LOG.md`.**
+
+**If a local or interactive Codex run occurs, then append only to `CODEX_RUN_LOG.md`.**
+
+**If another execution environment is introduced later, then give it a distinct provenance log rather than reusing one of these by convenience.**
 
 Never reconstruct a run that did not happen.
 
@@ -471,7 +478,7 @@ Let `P` be a candidate Erdős problem.
 
 ---
 
-## 16. Working-tree and code discipline for local agents
+## 16. Working-tree, run-log, and code discipline for local agents
 
 When operating in a local clone:
 
@@ -485,6 +492,16 @@ When operating in a local clone:
 - do not delete research artifacts unless the user explicitly asks;
 - do not expose private material in commits or files;
 - do not push or publish unless requested or clearly authorized by the task.
+
+For Codex specifically:
+
+**If** you are running locally or interactively as Codex and provenance should be recorded,
+
+**then** append to `CODEX_RUN_LOG.md`, not `RUN_LOG.md`.
+
+**Do not edit, rewrite, replace, normalize, or append to `RUN_LOG.md` from a local Codex session.** Treat it as another agent's provenance record.
+
+Before writing `CODEX_RUN_LOG.md`, read its current contents and append; never replace the whole file merely to add the latest run.
 
 If a checker is intended to support a mathematical claim, make it independently understandable: state what it tests, what range it covers, and what result means.
 
