@@ -8,7 +8,8 @@ This file records operational provenance for autonomous Erdős-problem batches. 
 | 2026-08-30 ~09:07 | commits around 14:07Z | #1, #20, #279, #414, #536 | First clearly observed autonomous batch after the missed overnight window. |
 | 2026-08-30 ~10:05 | commits around 15:05Z | #3, #9, #10, #12, #15 | Second clearly observed morning batch. #9 wording was corrected in follow-up commits. |
 | 2026-08-30 ~11:12 | commits around 16:12–16:14Z | #243, #273, #406, #686, #80 | Third clearly observed morning batch; ledger updated afterward. |
+| Unscheduled/current conversation run | 2026-08-30 ~17:04Z | #244 useful reformulation; #341 known/basic reduction; #359 useful reformulation; #423 useful state representation; #77 no progress | No candidate complete proof; reproduction not triggered. #42 was initially considered but rejected before mathematical attempt because the live database now labels it SOLVED (LEAN). Problem commits: `5693c6b`, `14a2983`, `e9a6463`, `56de6db`, `a4a79e4`; ledger commit `32f7dd9`. No scheduler anomaly for this run. |
 
 ## Logging rule
 
-Future autonomous runs should append one row with the observed execution time, selected problem IDs, final classifications, whether reproduction was triggered, and relevant commit references. Missed, late, duplicated, or silent runs should be recorded explicitly rather than inferred.
+Future autonomous runs should append one row with the observed execution time, selected problem IDs, final classifications, whether reproduction was triggered, and relevant commit(s). Missed, late, duplicated, or silent runs should be recorded explicitly rather than inferred.
