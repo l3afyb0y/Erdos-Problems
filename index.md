@@ -6,6 +6,11 @@ Fresh same-model reproduction audit: [`REPRODUCTION_AUDIT_2026-08-30.md`](REPROD
 
 | Erdős problem | Database status at attempt | Experiment result |
 |---|---|---|
+| [#160](problems/160.md) | OPEN | known reduction independently rediscovered / current upper frontier updated |
+| [#159](problems/159.md) | OPEN | known/basic structural reduction / no polynomial progress |
+| [#158](problems/158.md) | OPEN | useful reformulation / exact block-convolution capacity |
+| [#156](problems/156.md) | OPEN | candidate/new partial lemma — novelty unresolved |
+| [#155](problems/155.md) | OPEN | useful reformulation / exact tail-difference tax |
 | [#153](problems/153.md) | OPEN | useful reformulation / exact short-shift difference-set criterion |
 | [#148](problems/148.md) | OPEN | known/basic reduction independently rediscovered / no new progress |
 | [#143](problems/143.md) | OPEN | useful reformulation / multiplicative-shadow overlap barrier |
