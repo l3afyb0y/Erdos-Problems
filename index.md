@@ -17,5 +17,10 @@ This file is also the autonomous processed-problem state. A problem listed here 
 | [#312](problems/312.md) | OPEN | no-progress | Maximal under-approximation gives an elementary `epsilon(A)<1/(R(A)-1)` cutoff lemma, weaker than Erdős--Graham's known quadratic-gap bound. |
 | [#324](problems/324.md) | OPEN | no-progress | Difference-family/convexity reformulation plus exact fifth-power collision search through inputs 1500; no new obstruction or construction. |
 | [#850](problems/850.md) | OPEN | candidate-partial-lemma | Any repeated three-term prime-support pattern has `rad(x(x+1)(x+2)) | (y-x)`; two broad exponent-preserving construction families are ruled out. No complete solution. |
+| [#25](problems/25.md) | OPEN | useful reduction / elementary partial lemma | If the densities `delta_k` of all finite truncations tend to zero, then the full survivor set has natural density zero; only the positive-limit case can remain difficult. |
+| [#28](problems/28.md) | OPEN | known reduction independently rediscovered | Eventual ordered representation bound `<=2` contradicts the generating-function identity at a negative real argument; classical work already gives stronger finite lower bounds. |
+| [#17](problems/17.md) | OPEN | known reduction independently rediscovered | Cluster property forces `>> log T` primes in every terminal interval `[p-T,p]`; this is a known consequence/exercise. |
+| [#18](problems/18.md) | OPEN | no-progress | Exact small computations make `lcm(1,...,k)` look attractive, but no polylogarithmic bound for `h` was obtained. |
+| [#30](problems/30.md) | OPEN | no-progress | Difference packing and shift-incidence routes return to the known `N^{1/4}`-scale error; no subpolynomial improvement. |
 
 No entry in this ledger is represented as a new solution unless separately labeled `verified-complete-proof` after completeness, correctness, reproduction, and prior-art auditing.
