@@ -4,14 +4,20 @@ A working mathematical record for an autonomous experiment attacking **currently
 
 The goal is not to accumulate reformulations. The goal is to obtain complete proofs, disproofs, or constructions. Partial lemmas are recorded only when a complete solution is not reached in that attempt.
 
+## Agent instructions
+
+Repository-aware models should read [`AGENTS.md`](AGENTS.md) before solving. It is the canonical shared instruction layer for the grammar-first mathematical workflow, repository state, reproduction rules, and status discipline.
+
+[`TESTING_METHODOLOGY.md`](TESTING_METHODOLOGY.md) records the public experimental controls and verification protocol. [`RUN_LOG.md`](RUN_LOG.md) records what the autonomous system actually ran and when.
+
 ## Public scope
 
 Only problems whose current status in the Erdős Problems database is `open` are research targets here.
-This is apart of a larger focus project pertaining to language and LLM reasoning abilities. This repo exists more as a corpus of data for later purposes than any meaningful expectations the model will succeed in solving all open problems.
-Results of the experiment are currently promising, mostly in terms of it's ability to work unbelievably fast on these problems.
+This is a part of a larger focus project pertaining to language and LLM reasoning abilities. This repo exists more as a corpus of data for later purposes than any meaningful expectations the model will succeed in solving all open problems.
+Results of the experiment are currently promising, mostly in terms of its ability to work unbelievably fast on these problems.
 More information will likely be released in a preprint; this experiment is extremely volatile and difficult to control for, however, I've done my best to do so.
 
-This repository contains only the mathematical output layer:
+This repository contains the mathematical output and the operational instructions needed for reproducibility:
 
 - the open problem statement and current source/status reference;
 - conventional mathematical proofs, disproofs, reductions, constructions, or lemmas;
@@ -19,9 +25,10 @@ This repository contains only the mathematical output layer:
 - exact verification code and recorded outputs where applicable;
 - independent reproduction results for candidate complete solutions;
 - prior-art / novelty audit notes;
-- explicit status labels distinguishing partial progress from complete proofs.
+- explicit status labels distinguishing partial progress from complete proofs;
+- the repository-level agent instructions and testing controls used to generate/check those outputs.
 
-The broader research methodology concerning language as a reasoning substrate for large language models is intentionally **not** published here.
+The broader unpublished theory, private biographical context, and larger language/philosophy project are **not** published here.
 
 ## Machine state
 
@@ -50,10 +57,16 @@ A complete candidate is reproduced independently before promotion. Repeated mode
 ## Layout
 
 ```text
-problems/
-  NNN.md              # statement, mathematics, reproduction/verification, status
+AGENTS.md                    # canonical repository-agent instructions
+TESTING_METHODOLOGY.md       # public experimental / verification controls
+RUN_LOG.md                   # autonomous run provenance and anomalies
+index.md                     # running ledger and autonomous processed state
 
-index.md              # running ledger and autonomous processed state
+problems/
+  NNN.md                     # statement, mathematics, reproduction/verification, status
+
+verification/
+  ...                        # exact checkers where useful
 ```
 
 ## Experiment title
