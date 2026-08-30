@@ -6,6 +6,11 @@ Fresh same-model reproduction audit: [`REPRODUCTION_AUDIT_2026-08-30.md`](REPROD
 
 | Erdős problem | Database status at attempt | Experiment result |
 |---|---|---|
+| [#244](problems/244.md) | OPEN | useful reformulation / known Romanoff-type second-moment route |
+| [#341](problems/341.md) | OPEN | known/basic structural reduction / no new global progress |
+| [#359](problems/359.md) | OPEN | useful elementary reformulation / no asymptotic progress |
+| [#423](problems/423.md) | OPEN | useful exact state representation / no new asymptotic progress |
+| [#77](problems/77.md) | OPEN | no progress / approximate-submultiplicativity barrier |
 | [#243](problems/243.md) | OPEN | useful exact reformulation / no new global progress |
 | [#273](problems/273.md) | OPEN | known reduction independently rediscovered / construction search inconclusive |
 | [#406](problems/406.md) | OPEN | useful elementary structure / no progress beyond known frontier |
