@@ -7,6 +7,9 @@ The goal is not to accumulate reformulations. The goal is to obtain complete pro
 ## Public scope
 
 Only problems whose current status in the Erdős Problems database is `open` are research targets here.
+This is apart of a larger focus project pertaining to language and LLM reasoning abilities. This repo exists more as a corpus of data for later purposes than any meaningful expectations the model will succeed in solving all open problems.
+Results of the experiment are currently promising, mostly in terms of it's ability to work unbelievably fast on these problems.
+More information will likely be released in a preprint; this experiment is extremely volatile and difficult to control for, however, I've done my best to do so.
 
 This repository contains only the mathematical output layer:
 
