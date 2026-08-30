@@ -7,7 +7,7 @@ Fresh same-model reproduction audit: [`REPRODUCTION_AUDIT_2026-08-30.md`](REPROD
 | Erdős problem | Database status at attempt | Experiment result |
 |---|---|---|
 | [#3](problems/3.md) | OPEN | no progress / quantitative Szemerédi barrier |
-| [#9](problems/9.md) | OPEN | useful reformulation / exact negative finite-cover search |
+| [#9](problems/9.md) | OPEN | useful reformulation / computational negative finite-cover search |
 | [#10](problems/10.md) | OPEN | useful reformulation / no complete progress |
 | [#12](problems/12.md) | OPEN | known local structural lemma independently rediscovered / no new global progress |
 | [#15](problems/15.md) | OPEN | useful exact reformulation / no complete progress |
