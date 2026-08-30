@@ -6,6 +6,11 @@ Fresh same-model reproduction audit: [`REPRODUCTION_AUDIT_2026-08-30.md`](REPROD
 
 | Erdős problem | Database status at attempt | Experiment result |
 |---|---|---|
+| [#173](problems/173.md) | OPEN | useful reformulation / forced-colour geometric propagation |
+| [#172](problems/172.md) | OPEN | useful reformulation / diagonal-vs-off-diagonal Ramsey obstruction |
+| [#170](problems/170.md) | OPEN | no progress / duplicate-difference excess barrier |
+| [#169](problems/169.md) | OPEN | useful reformulation / multicolour van-der-Waerden lower envelope |
+| [#168](problems/168.md) | OPEN | known reduction independently rediscovered / certified-tail route only |
 | [#160](problems/160.md) | OPEN | known reduction independently rediscovered / current upper frontier updated |
 | [#159](problems/159.md) | OPEN | known/basic structural reduction / no polynomial progress |
 | [#158](problems/158.md) | OPEN | useful reformulation / exact block-convolution capacity |
