@@ -9,6 +9,11 @@ Fresh same-model reproduction audit: [`REPRODUCTION_AUDIT_2026-08-30.md`](REPROD
 
 | Erdős problem | Database status at attempt | Experiment result |
 |---|---|---|
+| [#203](problems/203.md) | OPEN | known reduction independently rediscovered / bounded CRT-cover search did not close |
+| [#197](problems/197.md) | OPEN | known/basic reduction independently rediscovered / infinite order-type barrier |
+| [#196](problems/196.md) | OPEN | useful reformulation / anchored multiplicative-order barrier |
+| [#195](problems/195.md) | OPEN | useful reformulation / order-type obstruction |
+| [#193](problems/193.md) | OPEN | useful reformulation / adjacent block-sum obstruction |
 | [#200](problems/200.md) | OPEN | known reduction independently rediscovered / primorial divisibility barrier |
 | [#187](problems/187.md) | OPEN | known reduction independently rediscovered / scale-local van der Waerden recursion |
 | [#181](problems/181.md) | OPEN | known reduction independently rediscovered / standard bipartite Ramsey lower bound |
