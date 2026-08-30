@@ -6,6 +6,11 @@ Fresh same-model reproduction audit: [`REPRODUCTION_AUDIT_2026-08-30.md`](REPROD
 
 | Erdős problem | Database status at attempt | Experiment result |
 |---|---|---|
+| [#153](problems/153.md) | OPEN | useful reformulation / exact short-shift difference-set criterion |
+| [#148](problems/148.md) | OPEN | known/basic reduction independently rediscovered / no new progress |
+| [#143](problems/143.md) | OPEN | useful reformulation / multiplicative-shadow overlap barrier |
+| [#128](problems/128.md) | OPEN | useful reformulation / exact local half-set inequality |
+| [#126](problems/126.md) | OPEN | known reduction independently rediscovered / logarithmic S-unit barrier |
 | [#112](problems/112.md) | OPEN | known reduction independently rediscovered / known polynomial-recursion barrier |
 | [#108](problems/108.md) | OPEN | no progress / short-cycle-transversal barrier |
 | [#104](problems/104.md) | OPEN | useful reformulation / known pair-incidence barrier |
