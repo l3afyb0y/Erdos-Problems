@@ -1,53 +1,58 @@
 # Experiment ledger
 
-This file is also the autonomous processed-problem state. A problem listed here is not selected again by routine solver runs unless it is deliberately reopened for verification.
+This file is the autonomous processed-problem state. A problem listed here is not selected again by routine solver runs unless deliberately reopened for verification. Individual `problems/<n>.md` files are the authoritative mathematical records; this index is intentionally compact.
 
-Fresh same-model reproduction audit: [`REPRODUCTION_AUDIT_2026-08-30.md`](REPRODUCTION_AUDIT_2026-08-30.md). That audit caught and repaired a logical overstatement in #324, a collision-statistic overstatement in #971, and a boundary qualification in #850.
+Fresh same-model reproduction audit: [`REPRODUCTION_AUDIT_2026-08-30.md`](REPRODUCTION_AUDIT_2026-08-30.md).
 
-| Erdős problem | Database status at attempt | Experiment result | Public note |
-|---|---|---|---|
-| [#536](problems/536.md) | OPEN | candidate/new partial lemma — novelty unresolved | Exact bound `f(N) <= N-floor(N/6)` via the `2`-adic/`3`-adic fibre row/column structure, hence `(5/6+o(1))N`; this improves the public `43/48` constant found in the post-discovery audit. Targeted searches found no equivalent result, but novelty is not certified. |
-| [#1](problems/1.md) | OPEN | known reduction independently rediscovered / no new progress | Entropy, middle-layer, and recursive separation routes return to the known `2^n/sqrt(n)` central-binomial barrier; no improvement obtained. |
-| [#20](problems/20.md) | OPEN | known reduction independently rediscovered / no new progress | A maximal disjoint-family transversal gives the classical factorial sunflower recurrence; the attempted bounded-trace strengthening did not remove the logarithmic loss. |
-| [#279](problems/279.md) | OPEN | useful reformulation / no complete progress | Exact moving-sieve sandwich: coverage by primes `p<=n/k` is necessary, while coverage by `p<=n/(k+1)` is sufficient for the threshold `t>=k`; no deterministic covering invariant was found. |
-| [#414](problems/414.md) | OPEN | known structural reductions independently rediscovered / no new progress | Parity changes only at square inputs and every step is `O(sqrt n)`; recent 2026 work already has stronger square/frontier analysis and exact coalescence verification through `10^10`. |
-| [#14](problems/14.md) | OPEN | candidate/new partial lemma — novelty unresolved | If the exceptional unique-sum count is `o(sqrt N)`, then necessarily `A(N) ~ 2 sqrt(2/pi) sqrt(N)`. Proof controls unbounded exceptional multiplicities before applying a Tauberian theorem; targeted prior-art search did not locate the exact constant, but novelty is not certified. |
-| [#11](problems/11.md) | OPEN | known reduction independently rediscovered / no new progress | A counterexample induces a finite cover of power-of-two exponents by residue classes modulo `ord_{p^2}(2)`; large-order primes can still kill isolated exponents. This lies in the known Granville--Soundararajan framework. |
-| [#81](problems/81.md) | OPEN | useful reformulation / no new asymptotic progress | Exact fixed-partition simplicial extension bookkeeping exposes reusable clique-neighborhood blocks as the local resource; no invariant forcing the conjectural `n^2/6+O(n)` total was found. |
-| [#85](problems/85.md) | OPEN | useful reformulation / no new asymptotic progress | One-vertex extension is `C4`-free iff its neighborhood is independent in the common-neighbor auxiliary graph; monotonicity would follow from an independent set of size `g(n)` in some extremal witness, but crude bounds do not force it. |
-| [#86](problems/86.md) | OPEN | known reduction independently rediscovered | Product decomposition gives weighted subadditivity of normalized `C4`-free hypercube density, but prior art has the stronger standard fact that this density is non-increasing. No new upper bound. |
-| [#68](problems/68.md) | OPEN | candidate/new partial lemma | Rationality of `sum_{n>=2}1/(n!-1)` forces an exact maximal-depth `p`-adic cancellation congruence for every sufficiently large prime. Exact scan of all 2260 primes `5<=p<20000` finds cancellation only for `p=139,2593`; infinitude of failures remains unproved. |
-| [#66](problems/66.md) | OPEN | useful reformulation / necessary asymptotic | If `r_A(n)~c log n`, then Tauberian inversion forces `A(N)~2 sqrt(c/pi) sqrt(N log N)`; parity of `r_A(2m)` exactly recovers membership of `m`. No contradiction or construction obtained. |
-| [#60](problems/60.md) | OPEN | known reduction independently rediscovered / useful near-extremal reduction | Exact codegree identity gives the standard `C4` supersaturation inequality; a counterexample with `o(sqrt n)` cycles would be an `o(sqrt n)`-edge perturbation of a near-extremal `C4`-free graph. |
-| [#52](problems/52.md) | OPEN | no-progress | Injectivity of unordered pairs under `(a+b,ab)` gives only a linear lower bound; no new invariant coupled additive and multiplicative collision structure beyond current sum-product methods. |
-| [#51](problems/51.md) | OPEN | known/basic reduction / no new progress | Exact inverse-totient factorization and a local replacement obstruction were obtained, but a very recent 2026 partial-results package is substantially stronger. |
-| [#36](problems/36.md) | OPEN | useful reformulation / elementary identity | Exact decomposition `max(C_x,C_-x)=(T_x+|E_x|)/2`: unoriented cross-colour mass plus a boundary-window orientation imbalance. No improvement to current numerical bounds. |
-| [#39](problems/39.md) | OPEN | no-progress / greedy obstruction anatomy | New-point exclusions are governed by `S+S-S` plus half-sums; Sidonicity alone does not control collisions among these three-term forbidden values. |
-| [#40](problems/40.md) | OPEN | no-progress / scale obstruction clarified | Single-scale and dyadic pair-budget arguments remain compatible with bounded representation below `sqrt(N)` by any diverging factor; genuinely multiscale input is required. |
-| [#41](problems/41.md) | OPEN | useful reformulation / exact translate-intersection structure | For a finite `B_3` set, anchored two-sum translates have exact pair/triple intersections; inclusion-exclusion alone collapses to the tautological triple-count and does not force the liminf drop. |
-| [#44](problems/44.md) | OPEN | useful reformulation / exact compatibility criterion | For a separated new block, extension is Sidon iff old/new positive difference sets are disjoint and `(B+B-B)∩A` is empty. This isolates the mixed three-term shadow but does not reach constant 1. |
-| [#708](problems/708.md) | OPEN | useful reformulation | Exact valuation-cover formulation; whole-interval divisibility reduces the conjecture to sparsifying consecutive-integer valuation vectors. Per-source carrier approach fails because reuse loses multiplicity. |
-| [#710](problems/710.md) | OPEN | useful reformulation | Exact Hall-matching formulation; deficiency is caused by collision of divisibility neighborhoods. A forced-position obstruction is exact but lies below the known asymptotic scale. |
-| [#711](problems/711.md) | OPEN | useful reformulation | Remaining first question becomes a translation-uniform Hall problem; exact redundancy identity isolates loss from raw divisor supply to distinct usable positions. No improvement to the known upper exponent. |
-| [#32](problems/32.md) | OPEN | no-progress / elementary coverage barrier | Dyadic set-cover count recovers only the logarithmic necessary scale; independent logarithmic random selection has only constant local representation mass and does not cover all targets. |
-| [#33](problems/33.md) | OPEN | useful reformulation / known frontier heuristic | Exact square-translate coverage inequality; continuous square-root convolution exposes the beta-integral constant `4/pi`, matching the known best liminf lower bound but not improving it. |
-| [#137](problems/137.md) | OPEN | useful reformulation / proof audit | Exposed a non-monotone multiplication error in a tempting reduction to three consecutive factors; no complete solution. |
-| [#242](problems/242.md) | OPEN | useful reformulation / exact finite evidence | Language-derived residue identities reduce the Erdős–Straus search to primes `1 mod 24`; a fresh reproduction reran all 9,732 hard-class primes below one million and exactly matched the original `k<=15` witness distribution. No universal proof. |
-| [#307](problems/307.md) | OPEN | known reduction independently rediscovered | Lowest-terms and disjointness lemmas plus the exact reciprocal-prime-sum barrier rederive the known requirement of at least 59 distinct primes total; exact rational threshold reproduced. |
-| [#863](problems/863.md) | OPEN | known reduction independently rediscovered | Algebraic comparison of the quoted published bounds reproduces conditionally and gives `c'_r < c_r`; prior 2026 observation already exists. Underlying external bounds were not re-proved in the reproduction audit. |
-| [#663](problems/663.md) | OPEN | useful reformulation | Exact partition of primes into unique consecutive-position buckets; exposes bounded-difference constraints lost by the primorial product bound. Fresh derivation reproduced the iff reduction. |
-| [#130](problems/130.md) | OPEN | useful reformulation / elementary structural lemma | No-four-concyclic condition gives at most three neighbors per integer-radius shell, hence quantitative long-edge forcing for high chromatic critical subgraphs. Reproduced. |
-| [#132](problems/132.md) | OPEN | useful reformulation / exact counting lemma | `L >= (D(n+1)-C(n,2))/n`; in particular, more than `n/2` distinct distances forces at least two distance classes of multiplicity at most `n`. Reproduced. |
-| [#1056](problems/1056.md) | OPEN | known reduction independently rediscovered | Consecutive product-one intervals are exactly repeated factorial residues modulo a prime; fresh modular computation reproduced every listed example through 9 intervals. |
-| [#971](problems/971.md) | OPEN | useful reformulation / corrected in audit | Exact empty-class identity and all finite tuples reproduce. Pair-collision count is not equivalent to first-order redundancy; the original overstatement was repaired. |
-| [#749](problems/749.md) | OPEN | useful reformulation | Any solution must have counting function on the Sidon scale `Theta(sqrt N)`; periodic positive-density constructions are impossible. Reproduced. |
-| [#312](problems/312.md) | OPEN | no-progress | Maximal under-approximation gives an elementary `epsilon(A)<1/(R(A)-1)` cutoff lemma, weaker than Erdős--Graham's known quadratic-gap bound. Lemma reproduced. |
-| [#324](problems/324.md) | OPEN | no-progress / corrected in audit | Fifth-power search through inputs 1500 reproduced exactly with no collision. Original claim equating distinct-index sum uniqueness with uniqueness of all positive differences was false and has been repaired. |
-| [#850](problems/850.md) | OPEN | candidate-partial-lemma / boundary-qualified | For nondegenerate `x`, any repeated three-term prime-support pattern has `rad(x(x+1)(x+2)) | (y-x)`; two exponent-preserving construction families are ruled out. Fresh derivation reproduced them; `x=0,1` are now handled separately. No complete solution. |
-| [#25](problems/25.md) | OPEN | useful reduction / elementary partial lemma | If the densities `delta_k` of all finite truncations tend to zero, then the full survivor set has natural density zero; only the positive-limit case can remain difficult. Reproduced. |
-| [#28](problems/28.md) | OPEN | known reduction independently rediscovered | Eventual ordered representation bound `<=2` contradicts the generating-function identity at a negative real argument; fresh derivation reproduced the contradiction. |
-| [#17](problems/17.md) | OPEN | known reduction independently rediscovered | Cluster property forces `>> log T` primes in every terminal interval `[p-T,p]`; fresh counting derivation reproduces the known consequence. |
-| [#18](problems/18.md) | OPEN | no-progress / computation reproduced | Fresh dynamic programming exactly reproduced `h(60)=4`, `h(420)=5`, `h(840)=5`, `h(2520)=5`, `h(27720)=6`; no polylogarithmic bound was obtained. |
-| [#30](problems/30.md) | OPEN | no-progress | Difference packing and shift-incidence routes return to the known `N^{1/4}`-scale error; no subpolynomial improvement. No positive new claim to promote. |
+| Erdős problem | Database status at attempt | Experiment result |
+|---|---|---|
+| [#3](problems/3.md) | OPEN | no progress / quantitative Szemerédi barrier |
+| [#9](problems/9.md) | OPEN | useful reformulation / exact negative finite-cover search |
+| [#10](problems/10.md) | OPEN | useful reformulation / no complete progress |
+| [#12](problems/12.md) | OPEN | known local structural lemma independently rediscovered / no new global progress |
+| [#15](problems/15.md) | OPEN | useful exact reformulation / no complete progress |
+| [#536](problems/536.md) | OPEN | candidate/new partial lemma — novelty unresolved |
+| [#1](problems/1.md) | OPEN | known reduction independently rediscovered / no new progress |
+| [#20](problems/20.md) | OPEN | known reduction independently rediscovered / no new progress |
+| [#279](problems/279.md) | OPEN | useful reformulation / no complete progress |
+| [#414](problems/414.md) | OPEN | known structural reductions independently rediscovered / no new progress |
+| [#14](problems/14.md) | OPEN | candidate/new partial lemma — novelty unresolved |
+| [#11](problems/11.md) | OPEN | known reduction independently rediscovered / no new progress |
+| [#81](problems/81.md) | OPEN | useful reformulation / no new asymptotic progress |
+| [#85](problems/85.md) | OPEN | useful reformulation / no new asymptotic progress |
+| [#86](problems/86.md) | OPEN | known reduction independently rediscovered |
+| [#68](problems/68.md) | OPEN | candidate/new partial lemma |
+| [#66](problems/66.md) | OPEN | useful reformulation / necessary asymptotic |
+| [#60](problems/60.md) | OPEN | known reduction independently rediscovered / useful near-extremal reduction |
+| [#52](problems/52.md) | OPEN | no progress |
+| [#51](problems/51.md) | OPEN | known/basic reduction / no new progress |
+| [#36](problems/36.md) | OPEN | useful reformulation / elementary identity |
+| [#39](problems/39.md) | OPEN | no progress / greedy obstruction anatomy |
+| [#40](problems/40.md) | OPEN | no progress / scale obstruction clarified |
+| [#41](problems/41.md) | OPEN | useful reformulation / exact translate-intersection structure |
+| [#44](problems/44.md) | OPEN | useful reformulation / exact compatibility criterion |
+| [#708](problems/708.md) | OPEN | useful reformulation |
+| [#710](problems/710.md) | OPEN | useful reformulation |
+| [#711](problems/711.md) | OPEN | useful reformulation |
+| [#32](problems/32.md) | OPEN | no progress / elementary coverage barrier |
+| [#33](problems/33.md) | OPEN | useful reformulation / known frontier heuristic |
+| [#137](problems/137.md) | OPEN | useful reformulation / proof audit |
+| [#242](problems/242.md) | OPEN | useful reformulation / exact finite evidence |
+| [#307](problems/307.md) | OPEN | known reduction independently rediscovered |
+| [#863](problems/863.md) | OPEN | known reduction independently rediscovered |
+| [#663](problems/663.md) | OPEN | useful reformulation |
+| [#130](problems/130.md) | OPEN | useful reformulation / elementary structural lemma |
+| [#132](problems/132.md) | OPEN | useful reformulation / exact counting lemma |
+| [#1056](problems/1056.md) | OPEN | known reduction independently rediscovered |
+| [#971](problems/971.md) | OPEN | useful reformulation / corrected in audit |
+| [#749](problems/749.md) | OPEN | useful reformulation |
+| [#312](problems/312.md) | OPEN | no progress |
+| [#324](problems/324.md) | OPEN | no progress / corrected in audit |
+| [#850](problems/850.md) | OPEN | candidate-partial-lemma / boundary-qualified |
+| [#25](problems/25.md) | OPEN | useful reduction / elementary partial lemma |
+| [#28](problems/28.md) | OPEN | known reduction independently rediscovered |
+| [#17](problems/17.md) | OPEN | known reduction independently rediscovered |
+| [#18](problems/18.md) | OPEN | no progress / computation reproduced |
+| [#30](problems/30.md) | OPEN | no progress |
 
 No entry in this ledger is represented as a new solution unless separately labeled `verified-complete-proof` after completeness, correctness, reproduction, and prior-art auditing.
