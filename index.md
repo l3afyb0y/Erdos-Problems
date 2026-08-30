@@ -6,6 +6,11 @@ Fresh same-model reproduction audit: [`REPRODUCTION_AUDIT_2026-08-30.md`](REPROD
 
 | Erdős problem | Database status at attempt | Experiment result | Public note |
 |---|---|---|---|
+| [#36](problems/36.md) | OPEN | useful reformulation / elementary identity | Exact decomposition `max(C_x,C_-x)=(T_x+|E_x|)/2`: unoriented cross-colour mass plus a boundary-window orientation imbalance. No improvement to current numerical bounds. |
+| [#39](problems/39.md) | OPEN | no-progress / greedy obstruction anatomy | New-point exclusions are governed by `S+S-S` plus half-sums; Sidonicity alone does not control collisions among these three-term forbidden values. |
+| [#40](problems/40.md) | OPEN | no-progress / scale obstruction clarified | Single-scale and dyadic pair-budget arguments remain compatible with bounded representation below `sqrt(N)` by any diverging factor; genuinely multiscale input is required. |
+| [#41](problems/41.md) | OPEN | useful reformulation / exact translate-intersection structure | For a finite `B_3` set, anchored two-sum translates have exact pair/triple intersections; inclusion-exclusion alone collapses to the tautological triple-count and does not force the liminf drop. |
+| [#44](problems/44.md) | OPEN | useful reformulation / exact compatibility criterion | For a separated new block, extension is Sidon iff old/new positive difference sets are disjoint and `(B+B-B)∩A` is empty. This isolates the mixed three-term shadow but does not reach constant 1. |
 | [#708](problems/708.md) | OPEN | useful reformulation | Exact valuation-cover formulation; whole-interval divisibility reduces the conjecture to sparsifying consecutive-integer valuation vectors. Per-source carrier approach fails because reuse loses multiplicity. |
 | [#710](problems/710.md) | OPEN | useful reformulation | Exact Hall-matching formulation; deficiency is caused by collision of divisibility neighborhoods. A forced-position obstruction is exact but lies below the known asymptotic scale. |
 | [#711](problems/711.md) | OPEN | useful reformulation | Remaining first question becomes a translation-uniform Hall problem; exact redundancy identity isolates loss from raw divisor supply to distinct usable positions. No improvement to the known upper exponent. |
