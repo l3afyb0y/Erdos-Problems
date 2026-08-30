@@ -6,6 +6,11 @@ Fresh same-model reproduction audit: [`REPRODUCTION_AUDIT_2026-08-30.md`](REPROD
 
 | Erdős problem | Database status at attempt | Experiment result | Public note |
 |---|---|---|---|
+| [#708](problems/708.md) | OPEN | useful reformulation | Exact valuation-cover formulation; whole-interval divisibility reduces the conjecture to sparsifying consecutive-integer valuation vectors. Per-source carrier approach fails because reuse loses multiplicity. |
+| [#710](problems/710.md) | OPEN | useful reformulation | Exact Hall-matching formulation; deficiency is caused by collision of divisibility neighborhoods. A forced-position obstruction is exact but lies below the known asymptotic scale. |
+| [#711](problems/711.md) | OPEN | useful reformulation | Remaining first question becomes a translation-uniform Hall problem; exact redundancy identity isolates loss from raw divisor supply to distinct usable positions. No improvement to the known upper exponent. |
+| [#32](problems/32.md) | OPEN | no-progress / elementary coverage barrier | Dyadic set-cover count recovers only the logarithmic necessary scale; independent logarithmic random selection has only constant local representation mass and does not cover all targets. |
+| [#33](problems/33.md) | OPEN | useful reformulation / known frontier heuristic | Exact square-translate coverage inequality; continuous square-root convolution exposes the beta-integral constant `4/pi`, matching the known best liminf lower bound but not improving it. |
 | [#137](problems/137.md) | OPEN | useful reformulation / proof audit | Exposed a non-monotone multiplication error in a tempting reduction to three consecutive factors; no complete solution. |
 | [#242](problems/242.md) | OPEN | useful reformulation / exact finite evidence | Language-derived residue identities reduce the Erdős–Straus search to primes `1 mod 24`; a fresh reproduction reran all 9,732 hard-class primes below one million and exactly matched the original `k<=15` witness distribution. No universal proof. |
 | [#307](problems/307.md) | OPEN | known reduction independently rediscovered | Lowest-terms and disjointness lemmas plus the exact reciprocal-prime-sum barrier rederive the known requirement of at least 59 distinct primes total; exact rational threshold reproduced. |
