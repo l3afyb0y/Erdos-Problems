@@ -4,7 +4,7 @@ This repository is both a mathematical work log and an experimental record. This
 
 ## Experimental object
 
-The primary experimental unit is one attempt on one Erdős problem whose current public status is `OPEN` at selection time.
+The primary experimental unit is one serious attempt on one Erdős problem whose current public status is `OPEN` at selection time.
 
 The experiment is interested in several increasingly strong outcomes:
 
@@ -16,6 +16,16 @@ The experiment is interested in several increasingly strong outcomes:
 6. a complete result whose novelty also survives prior-art review.
 
 These are different claims and must not be collapsed into one another.
+
+## Depth is preferred over throughput
+
+Processed-problem count is not a success metric.
+
+The default autonomous unit is now **one problem worked deeply**, not a batch of shallow attempts. This methodological change follows early runs in which the strongest gains appeared when the solver revisited a promising argument, preserved case state, and composed an earlier lemma rather than moving immediately to a new problem.
+
+A run that obtains one correct, independently checkable new lemma or improved bound can be more informative than a run that records many reformulations.
+
+Therefore later runs should not be compared with earlier multi-problem batches as though they used an identical search budget or stopping rule.
 
 ## Model context is an experimental variable
 
@@ -38,7 +48,7 @@ This matters especially when comparing:
 - a high-context interactive ChatGPT run;
 - an autonomous scheduled run;
 - a locally cloned Codex run;
-- a fresh verification model that is intentionally given less discovery context.
+- a fresh verification model intentionally given less discovery context.
 
 Those conditions may all be scientifically useful, but they should not be described as identical controls.
 
@@ -50,7 +60,7 @@ Before an attempt:
 
 1. Read `index.md`, which is the processed-problem ledger.
 2. Select only a problem currently listed as open by a maintained public source.
-3. Skip problems already processed unless deliberately reopened for reproduction or verification.
+3. Skip problems already processed unless deliberately reopened for a second pass, reproduction, or verification.
 4. Perform a narrow status/claim check sufficient to avoid spending an attempt on a problem that has already been credibly solved.
 5. Avoid reading detailed existing approaches before the discovery pass unless necessary to understand the statement. This reduces direct solution contamination, but cannot remove information already present in model pretraining.
 
@@ -60,9 +70,33 @@ The public status source and date should be recorded in the problem entry.
 
 The first derivation is treated as the discovery artifact.
 
-If a complete-looking result appears, freeze the derivation before doing a detailed literature search. Preserve enough of the argument to identify its decisive invariant, construction, or contradiction and the exact dependency chain.
+If a complete-looking result appears, freeze the derivation before doing a detailed literature search. Preserve enough of the argument to identify its decisive invariant, construction, contradiction, recurrence, or closure mechanism and the exact dependency chain.
 
 A result is not promoted because it looks short, elegant, elementary, familiar, or highly confident.
+
+## Tool jurisdiction
+
+Tool use should be recorded by phase because different uses answer different experimental questions.
+
+### Selection/status tools
+
+Public web/package/database access may be used to verify the statement and current open status. Detailed remarks and solution attempts should be avoided before novelty-sensitive discovery when practical.
+
+### Discovery tools
+
+Language-first reasoning is the intended primary search representation.
+
+Simple calculators or exact arithmetic may be used for bookkeeping. If code, brute force, symbolic algebra, theorem search, SAT/MIP, or package enumeration materially **discovers** the candidate structure, record that as computational or tool-assisted discovery rather than presenting the prose as the sole discovery mechanism.
+
+### Verification tools
+
+Once a candidate structure exists, exact computation, formal tools, fresh code, boundary enumeration, symbolic checking, and alternate representations are encouraged as adversarial tests.
+
+### Prior-art tools
+
+After internal mathematical checking, external search should become broad rather than narrow.
+
+Run provenance should record tools that materially changed discovery or verification when that distinction is relevant.
 
 ## Reproduction protocol
 
@@ -85,16 +119,20 @@ Same-model reproduction audits are therefore useful error detectors but are expl
 
 ## Adversarial proof checking
 
-For every candidate proof or disproof, separately inspect:
+For every candidate proof, disproof, or strong partial lemma, separately inspect:
 
 - quantifier direction and scope;
 - converse/implication reversals;
+- both directions of every claimed equivalence;
 - hidden assumptions;
 - positivity and zero cases;
 - coprimality and divisibility edge cases;
 - parity and residue boundaries;
+- ordered versus unordered or distinct versus repeated objects;
+- support versus multiplicity;
 - asymptotic uniformity;
 - monotonicity assumptions;
+- whether later operations can repair an earlier defect;
 - finite-to-universal extrapolation;
 - use of external theorems and whether their hypotheses match the present formulation.
 
@@ -122,8 +160,19 @@ Search for:
 - the same conclusion;
 - the decisive lemma or invariant;
 - equivalent formulations;
+- the same constant, recurrence, closure map, or construction;
 - stronger results that imply the candidate;
-- recent preprints, formalizations, forum notes, comments, or solver-generated claims not yet reflected in the main database.
+- recent preprints, formalizations, forum notes, comments, solver-generated claims, and AI-assisted working reports not yet reflected in the main database.
+
+For Erdős problems, a serious post-discovery audit should normally include, when available:
+
+- the maintained Erdős Problems page;
+- Erdős Problem a Day / recent working reports;
+- arXiv and recent papers;
+- formal-conjecture repositories or current status mirrors;
+- targeted web searches for the exact lemma, constant, construction, and decisive phrase.
+
+The #261 Codex run is a useful caution: its finite sweep through `100000` was independently correct but had already appeared in a recent AI-assisted working report even though the older peer-reviewed range was only `10000`. Recent working sources therefore matter to novelty checking.
 
 Classification should distinguish:
 
@@ -151,6 +200,8 @@ When an error is found:
 
 The 2026-08-30 reproduction audit is an example: it detected a false equivalence in #324, an overstated collision equivalence in #971, and a boundary qualification in #850.
 
+The #261 Codex run is another example: a boundary check caught that the greedy path for target `1` produced only an inadmissible one-term representation, and the verifier was corrected instead of allowing the finite sweep to hide the boundary failure.
+
 ## Automation and run provenance
 
 Execution provenance is separated by agent/environment so one agent cannot overwrite another agent's operational history.
@@ -162,8 +213,8 @@ Each logged run should record, when relevant:
 
 - scheduled time when known;
 - observed execution/commit time;
-- problem IDs or task selected;
-- output classifications;
+- problem ID or task selected;
+- output classification;
 - whether a candidate complete solution triggered reproduction;
 - tools materially used during discovery versus verification;
 - relevant commit(s);
