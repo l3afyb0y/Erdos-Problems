@@ -6,6 +6,11 @@ Fresh same-model reproduction audit: [`REPRODUCTION_AUDIT_2026-08-30.md`](REPROD
 
 | Erdős problem | Database status at attempt | Experiment result |
 |---|---|---|
+| [#243](problems/243.md) | OPEN | useful exact reformulation / no new global progress |
+| [#273](problems/273.md) | OPEN | known reduction independently rediscovered / construction search inconclusive |
+| [#406](problems/406.md) | OPEN | useful elementary structure / no progress beyond known frontier |
+| [#686](problems/686.md) | OPEN | known reduction independently rediscovered / no new square-case progress |
+| [#80](problems/80.md) | OPEN | no progress / elementary incidence anatomy |
 | [#3](problems/3.md) | OPEN | no progress / quantitative Szemerédi barrier |
 | [#9](problems/9.md) | OPEN | useful reformulation / computational negative finite-cover search |
 | [#10](problems/10.md) | OPEN | useful reformulation / no complete progress |
