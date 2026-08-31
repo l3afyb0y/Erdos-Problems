@@ -104,7 +104,10 @@ def solve2(e1, e2):
 
 def main():
     # Verify the published 8-point configuration itself.
-    assert all(not collinear(P[i], P[j], P[k]) for i, j, k in combinations(range(8), 3))
+    assert all(
+        not collinear(P[i], P[j], P[k])
+        for i, j, k in combinations(range(8), 3)
+    )
     assert all(
         not concyclic4(P[i], P[j], P[k], P[l])
         for i, j, k, l in combinations(range(8), 4)
@@ -160,13 +163,13 @@ def main():
             if q not in P:
                 distinct_valid_extensions.append(q)
 
+    degenerate = (Fraction(3, 2), Fraction(9, 2))
+
     assert assignment_hits == 1163
     assert len(candidates) == 148
     assert len(at_least_five_old) == 46
     assert distinct_valid_extensions == []
-    assert histogram_hits_including_coincidence == [Fraction(3, 2), Fraction(9, 2)] or set(histogram_hits_including_coincidence) == {(Fraction(3, 2), Fraction(9, 2))}
-
-    degenerate = (Fraction(3, 2), Fraction(9, 2))
+    assert set(histogram_hits_including_coincidence) == {degenerate}
     assert degenerate in P
     assert d2(degenerate, degenerate) == 0
 
@@ -174,7 +177,10 @@ def main():
     print("three-center/radius assignments checked:", 56 * 7**3)
     print("satisfying assignment hits:", assignment_hits)
     print("distinct exact candidates:", len(candidates))
-    print("candidates with >=5 old-valued incident distances:", len(at_least_five_old))
+    print(
+        "candidates with >=5 old-valued incident distances:",
+        len(at_least_five_old),
+    )
     print("distinct valid one-point extensions:", len(distinct_valid_extensions))
     print("sole histogram hit allowing coincidence:", degenerate)
 
