@@ -9,6 +9,7 @@ Fresh same-model reproduction audit: [`REPRODUCTION_AUDIT_2026-08-30.md`](REPROD
 
 | Erdős problem | Database status at attempt | Experiment result |
 |---|---|---|
+| [#212](problems/212.md) | OPEN | candidate/new partial lemma — novelty unresolved / denominator-mesh sparsity |
 | [#208](problems/208.md) | OPEN | useful reformulation / exact squarefree-kernel injection; no new asymptotic progress |
 | [#203](problems/203.md) | OPEN | known reduction independently rediscovered / bounded CRT-cover search did not close |
 | [#197](problems/197.md) | OPEN | known/basic reduction independently rediscovered / infinite order-type barrier |
